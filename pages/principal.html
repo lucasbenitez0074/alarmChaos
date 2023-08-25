@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="principalBody">
+    <button class="callToAct"></button>
+    <header id="principal" class="principal">
+        
+        <div class="addAlarmNav">
+            <h4>Add alarm</h4>
+            <input type="time" class="inputAlarm" id="inputAlarm">
+            <input type="text" placeholder="motivo" id="inputMotivo" class="inputAlarm">
+            <button class="addAlarmBtn">
+                <img src="../assets/add-post.png" alt="">
+            </button>
+        </div>
+    </header>
+    <main>
+        <div class="pantallaReloj">
+            <p class="horario"></p>
+        </div>
+        <h4>CHAOS</h4>
+        <div class="alarmContainer"></div>
+    </main>
+    <audio class="sonidoAlarma" id="alarmSound" src="../assets/Sonido de alarma.mp3"></audio>
+    
+    <script src="../script.js"></script>
+    
+</body>
+</html>
