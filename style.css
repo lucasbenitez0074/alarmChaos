@@ -237,7 +237,7 @@ main {
     background-color: rgb(237, 253, 253);
     box-shadow: inset 0 0 .5rem black;
 }
-main h4 {
+main h2 {
     grid-row: 1/2;
     align-self: center;
     margin-top: 3.125rem;
@@ -275,4 +275,53 @@ main h4 {
 .alarmContainer .newAlarm .delete {
     width: 3.5rem;
     height: 3.5rem;
+}
+
+.changeToDarkTheme {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: black;
+    border: none;
+    box-shadow: 0 0 .5rem black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+    margin: 1.5625rem ;
+    cursor: pointer;
+}
+.changeToDarkTheme .moon {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.changeToLightTheme {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    box-shadow: 0 0 .5rem black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+    margin: 1.5625rem ;
+    cursor: pointer;
+}
+
+.changeToLightTheme .sun {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.hidden {
+    display: none;
 }

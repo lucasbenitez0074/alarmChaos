@@ -104,6 +104,61 @@ document.querySelector(".addAlarmBtn").addEventListener("click", () => {
     }
 });
 
+const btnDark = document.getElementById("btnDark");
+const btnLight = document.getElementById("btnLight");
+
+
+
+function changeDarkThemes(){
+    document.querySelector("body").style.backgroundColor="#121212"
+    headerPrincipal.style.backgroundColor="#151e21"
+    document.querySelector("h2").style.color="white"
+    document.querySelector(".addAlarmBtn").style.backgroundColor="#151e21"
+    
+    ls.setItem("theme","dark")
+}
+
+function changeLightThemes(){
+    document.querySelector("body").style.backgroundColor="white"
+    headerPrincipal.style.backgroundColor="#34581D"
+    document.querySelector("h2").style.color="black"
+    document.querySelector(".addAlarmBtn").style.backgroundColor="#34581D"
+    
+    ls.setItem("theme","light")
+}
+
+
+
+
+btnDark.addEventListener("click",()=>{
+    btnDark.classList.replace("changeToDarkTheme","hidden");
+    btnLight.classList.replace("hidden","changeToLightTheme");
+    
+    changeDarkThemes();
+})
+
+btnLight.addEventListener("click",()=>{
+    btnLight.classList.replace("changeToLightTheme","hidden");
+    btnDark.classList.replace("hidden","changeToDarkTheme");
+    
+    changeLightThemes();
+})
+
+const ls = localStorage;
+
+console.log(ls)
+document.addEventListener("DOMContentLoaded",()=>{
+    if(ls.getItem("theme") === null){
+        ls.setItem("theme","light")
+    }
+    if(ls.getItem("theme") === "light" ){
+        changeLightThemes()
+    }
+    if(ls.getItem("theme") === "dark"){
+        changeDarkThemes()
+    }
+})
+
 
 /*
 FALTA AGREGAR FUNCIONALIDADES PARA QUE SE BORRE LA ALARMA LUEGO DE QUE SE EJECUTE SOLA
